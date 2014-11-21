@@ -10,6 +10,23 @@
   </div>
 
 
+  <section id = "Grocery List">
+    <ul>
+    <% @grocery_list.each_line do |line| %>
+      <li><%= line %></li>
+    <% end %>
+    </ul>
+  <section id="post-form">
+    <fieldset>
+    <legend>List it!</legend>
+
+    <form action= '/groceries' method = "post" required>
+    <textarea name = "item" placeholder = "Enter item here" required></textarea>
+    <input type = submit value = "Add to list">
+    </fieldset>
+    </form>
+  </section>
+
 
 </body>
 
